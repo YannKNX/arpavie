@@ -1,0 +1,5 @@
+name: Arpavie Core
+type: module
+description: 'Module permettant de centraliser les fonctios réutilisables'
+package: Arpavie
+core: '8.x'

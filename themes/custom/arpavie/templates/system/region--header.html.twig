@@ -1,0 +1,33 @@
+<header>
+    <div class="header-content">
+        <div class="navbar">
+            <div class="container">
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        
+                        <li><a target="_blank" href="" class="social"><i class="fa fa-twitter " aria-hidden="true"></i></a></li>
+                        <li><a target="_blank" href="" class="social"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+                        <li><a target="_blank" href="" class="social"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                        <li class=""><a href="/user" class="joint-us">Nous rejoindre</a></li>
+                        <li class=""><a href="/user" class="call-us">01 41 09 43 43</a></li>
+                        
+                        <li class="">
+                            <form id="head-search-form" class="" action="/recherche" method="GET" accept-charset="UTF-8">
+                                <input placeholder="Recherche" name="term" value="" id="term" size="20" maxlength="128" type="text">
+                                <button type="submit" value="ok" class="btn search-button"><i class="fa fa-search" aria-hidden="true"></i></button>
+                            </form>
+                        </li>
+                        <li class=""><a href="/user" class="my-space">Espace personnel</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- arpavie navigation-->
+        <div>
+            {{ content }} {# defini dans la configuration des blocs #}
+        </div>
+        
+    </div>
+        
+</header>

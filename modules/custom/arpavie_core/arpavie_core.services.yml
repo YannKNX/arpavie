@@ -1,0 +1,14 @@
+services:
+    arpavie_core.taxonomy_service:
+        class: Drupal\arpavie_core\Service\TaxonomyService
+    
+    arpavie_core.node_service:
+        class: Drupal\arpavie_core\Service\NodeService
+
+    arpavie_core.carousel_service:
+        class: Drupal\arpavie_core\Service\CarouselService
+        arguments: ['@arpavie_core.node_service']
+    
+##    arpavie_core.search_service:
+##      class: Drupal\arpavie_core\Service\SearchService
+##

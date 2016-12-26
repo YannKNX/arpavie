@@ -1,0 +1,50 @@
+<?php
+
+/**
+ * @file
+ * Bootstrap sub-theme.
+ *
+ * Place your custom PHP code in this file.
+ */
+function arpavie_theme($existing, $type, $theme, $path)
+{
+    return [
+        'home' => [
+            'template' => 'home',
+            'path' => $path . '/templates',
+            'variables' => [
+                'searchResidenceForm' => null,
+                'carouselList' => []
+            ],
+        ],
+    ];
+}
+
+/**
+ * Implements hook_preprocess_region().
+ *
+ * Permet d'injecter des données/librairies pour le hook region (regions d'une page)
+ */
+function arpavie_preprocess_region(&$variables)
+{
+    /** @var \Drupal\idec\Service\MenuService $menuService */
+//   kint($variables['region']);
+    $region = $variables['region'];
+    switch ($region)
+    {
+        case 'header':
+//            $variables["mainMenu"] = 'coucouc';
+            break;
+    }
+}
+
+/**
+ * implements theme_preprocess_page
+ */
+function arpavie_preprocess_page(&$variables) {
+    
+    if (\Drupal::routeMatch()->getRouteName() === 'arpavie_core.home') {
+        // ajouter residence recherche form js
+        $variables['#attached']['library'][] = 'arpavie/custom-residence-search';
+    }
+}

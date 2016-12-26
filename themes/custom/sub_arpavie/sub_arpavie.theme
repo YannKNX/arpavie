@@ -1,0 +1,17 @@
+<?php
+/**
+ * @file
+ * Bootstrap sub-theme.
+ *
+ * Place your custom PHP code in this file.
+ */
+function sub_arpavie_theme($existing, $type, $theme, $path)
+{
+    return [
+        'temp1' => [
+            'template' => 'temp',
+            'path' => $path . '/templates',
+            'variables' => ['data' => []],
+        ],
+    ];
+}

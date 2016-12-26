@@ -1,0 +1,17 @@
+arpavie_core.home:
+    path: /accueil
+    defaults:
+      _controller: '\Drupal\arpavie_core\Controller\HomepageController::indexAction'
+      _title: 'Accueil'
+    requirements:
+      _permission: 'access content'
+
+
+arpavie.settings:
+    path: '/admin/arpavie/settings'
+    defaults:
+        _form: '\Drupal\arpavie_core\Form\ArpavieSettingsForm'
+        _title: 'Arpavie configuration'
+    requirements:
+        _permission: 'administer site configuration'
+        
