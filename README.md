@@ -21,9 +21,10 @@
 ## Application Drupal8
     - git clone  git https://github.com/kernix/arpavie.git
     - composer install
-    - mkdir sites/default/files
-    - cd sites/default
-    - cp default.settings.php settings.php
+    - Create the Files Directory
+        - mkdir sites/default/files
+    - create settings.php file :
+        - cp sites/default/default.settings.php sites/default/settings.php
     - configuration sites/default/settings.php
         - Set the variable 
           $settings['hash_salt'] = 'U-7M9jqUni2HgudgEwhI0MYJDz0DXsyEQVD6jOuVaWRI3nN-LC0M1WDjKFPymvB5M3a9AR2FOA';
@@ -49,7 +50,7 @@
 
 ## Database
     - create database "arpavie_dev" for dev // "arpavie_rec" for recette 
-    - dump database from scripts/sql/arpavie.sql
+    - dump database from scripts/sql/arpavie.sql with following command : 
         - drush sql-cli < scripts/sql/arpavie.sql
-    - caches rebuild
+    - caches rebuild with following command :
         - drush cr
