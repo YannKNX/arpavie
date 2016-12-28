@@ -30,8 +30,9 @@
     - cp default.settings.php settings.php
     - configuration sites/default/settings.php
         - Set the variable 
-$settings['hash_salt'] = 'U-7M9jqUni2HgudgEwhI0MYJDz0DXsyEQVD6jOuVaWRI3nN-LC0M1WDjKFPymvB5M3a9AR2FOA'
-;       - Add following lines to the end of the file and set your password for the database: 
+          $settings['hash_salt'] = 'U-7M9jqUni2HgudgEwhI0MYJDz0DXsyEQVD6jOuVaWRI3nN-LC0M1WDjKFPymvB5M3a9AR2FOA';
+          
+        - Add following lines to the end of the file and set your password for the database: 
             $databases['default']['default'] = array (
                 'database' => 'arpavie_dev', // arpavie_rec pour la recette !!
                 'username' => 'root',
