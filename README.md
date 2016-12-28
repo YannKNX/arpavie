@@ -18,10 +18,6 @@
             `drush init`
 
 
-## Database
-    - create database "arpavie_rec"
-    - dump database from scripts/sql/arpavie.sql
-
 ## Application Drupal8
     - git clone  git https://github.com/kernix/arpavie.git
     - composer install
@@ -50,3 +46,10 @@
     - sets the sites/default/files directory to 755 [drwx-rw-rw] (chmod 755 sites/default/files )
     - chmod 555 sites/default
     - chmod 444 sites/default/settings.php 
+
+## Database
+    - create database "arpavie_dev" for dev // "arpavie_rec" for recette 
+    - dump database from scripts/sql/arpavie.sql
+        - drush sql-cli < scripts/sql/arpavie.sql
+    - caches rebuild
+        - drush cr
