@@ -19,17 +19,24 @@
 
 
 ## Application Drupal8
+
     - git clone  git https://github.com/kernix/arpavie.git
-    - composer install
-    - Create the Files Directory
-        - mkdir sites/default/files
-    - create settings.php file :
+
+    - Installation via composer :
+        composer install
+
+    - Create the Files Directory with command :
+        mkdir sites/default/files
+
+    - create settings.php file with command :
         - cp sites/default/default.settings.php sites/default/settings.php
+
     - configuration sites/default/settings.php
         - Set the variable 
           $settings['hash_salt'] = 'U-7M9jqUni2HgudgEwhI0MYJDz0DXsyEQVD6jOuVaWRI3nN-LC0M1WDjKFPymvB5M3a9AR2FOA';
           
-        - Add following lines to the end of the file and set your password for the database: 
+        - Add following lines to the end of the file and set your password for the database:
+
             $databases['default']['default'] = array (
                 'database' => 'arpavie_dev', // arpavie_rec pour la recette !!
                 'username' => 'root',
@@ -43,14 +50,22 @@
 
                 $settings['install_profile'] = 'standard';
                 
+
 ## Permission Check
-    - sets the sites/default/files directory to 755 [drwx-rw-rw] (chmod 755 sites/default/files )
+
+    - sets the sites/default/files directory to 755 [drwx-rw-rw] with following command :
+        chmod 755 sites/default/files
+
     - chmod 555 sites/default
+
     - chmod 444 sites/default/settings.php 
 
 ## Database
+
     - create database "arpavie_dev" for dev // "arpavie_rec" for recette 
+
     - dump database from scripts/sql/arpavie.sql with following command : 
-        - drush sql-cli < scripts/sql/arpavie.sql
+        drush sql-cli < scripts/sql/arpavie.sql
+
     - caches rebuild with following command :
         - drush cr
